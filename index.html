@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code with Logo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate a QR Code with Your Logo</h1>
+
+        <div class="input-container">
+            <input type="text" id="text" placeholder="Enter text or URL" />
+            <label for="logo" class="file-label">Select a logo image file (optional):</label>
+            <input type="file" id="logo" accept="image/*" />
+            <button class="btn" onclick="generateQRCode()">Generate</button>
+        </div>
+
+        <div id="qrcode-container">
+            <canvas id="qrcode" width="200" height="200"></canvas>
+        </div>
+
+        <button id="download-btn" class="btn hidden" onclick="downloadQRCode()">Download</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
